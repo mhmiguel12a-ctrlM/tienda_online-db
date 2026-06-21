@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Proyecto Base de Datos</title>
+    <meta charset="UTF-8">
+    <title>Dashboard Tienda Online</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Productos del Proyecto</h1>
+<header>
+    <h1>Dashboard Tienda Online</h1>
+    <p>Visualización de productos registrados en Supabase</p>
+</header>
 
-<table border="1">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Producto</th>
-            <th>Categoría</th>
-        </tr>
-    </thead>
-    <tbody id="tabla"></tbody>
-</table>
+<main>
+    <section class="card">
+        <h2>Productos del Proyecto</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer>
+    Proyecto Base de Datos II | PostgreSQL + Supabase + GitHub Pages
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="script.js"></script>
