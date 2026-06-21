@@ -1,38 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Dashboard Tienda Online</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Dashboard Tienda Online</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<header class="hero">
+  <div>
     <h1>Dashboard Tienda Online</h1>
-    <p>Visualización de productos registrados en Supabase</p>
+    
+  </div>
 </header>
 
-<main>
-    <section class="card">
-        <h2>Productos del Proyecto</h2>
+<main class="container">
 
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Producto</th>
-                        <th>Categoría</th>
-                    </tr>
-                </thead>
-                <tbody id="tabla"></tbody>
-            </table>
-        </div>
-    </section>
+  <section class="stats">
+    <div class="stat-card">
+      <span>Total productos</span>
+      <strong id="totalProductos">0</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>Categorías</span>
+      <strong id="totalCategorias">0</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>Estado</span>
+      <strong id="estadoConexion">Cargando...</strong>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <div>
+        <h2>Productos registrados</h2>
+        <p>Listado obtenido directamente desde Supabase</p>
+      </div>
+
+      <input 
+        type="text" 
+        id="buscador" 
+        placeholder="Buscar producto o categoría..."
+      >
+    </div>
+
+    <div id="loader" class="loader">Cargando productos...</div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Categoría</th>
+          </tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+      </table>
+    </div>
+  </section>
+
 </main>
 
 <footer>
-    Proyecto Base de Datos II | PostgreSQL + Supabase + GitHub Pages
+  Desarrollado para el proyecto final de Base de Datos II
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
